@@ -1,7 +1,12 @@
 vim.pack.add({
-  {
-    src= "https://github.com/kungfusheep/mfd.nvim",
-  }
+	{
+		src = "https://github.com/kungfusheep/mfd.nvim",
+	},
 })
 
-vim.cmd.colorscheme("mfd-hud")
+require("mfd").setup({
+	bright_comments = true,
+	no_italic = true,
+})
+
+vim.cmd.colorscheme("mfd-amber")
