@@ -3,6 +3,6 @@ return {
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme("mfd-lumon")
+		vim.cmd.colorscheme("mfd-hud")
 	end,
 }

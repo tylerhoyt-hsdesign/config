@@ -25,4 +25,8 @@ M.on_attach = function(_, bufnr)
 	map("n", "<leader>D", fzf.diagnostics_document, "Document Diagnostics")
 end
 
+M.lazy_path = function(plugin)
+	return vim.fn.stdpath("data") .. "/lazy/" .. plugin
+end
+
 return M
