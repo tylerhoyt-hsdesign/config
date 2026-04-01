@@ -22,9 +22,7 @@ vim.opt.undolevels = 10000
 vim.g.syntax_on = true
 vim.opt.synmaxcol = 300
 vim.opt.re = 0
-vim.opt.signcolumn = "number"
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = "number"
 
 ---------------------------------------------------------
 --- 4. SCROLLING & UI RESPONSIVENESS
@@ -61,3 +59,21 @@ vim.opt.relativenumber = true
 ---------------------------------------------------------
 vim.opt.mousemodel = "extend"
 vim.opt.termguicolors = true
+
+---------------------------------------------------------
+--- 8. DIAGNOSTICS (Neovim >= 0.10)
+---------------------------------------------------------
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+	underline = true,
+})
+
+---------------------------------------------------------
+--- 9. NETRW
+---------------------------------------------------------
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+vim.g.netrw_keepdir = 0
+vim.g.netrw_winsize = 25
+vim.g.netrw_localcopydircmd = "cp -r"

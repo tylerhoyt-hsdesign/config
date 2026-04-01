@@ -9,4 +9,12 @@ require("mfd").setup({
 	no_italic = true,
 })
 
-vim.cmd.colorscheme("mfd-amber")
+vim.cmd.colorscheme("mfd-flir-rh")
+vim.opt.guicursor = {
+	"n:block-CursorNormal",
+	"v:block-CursorVisual",
+	"i:block-CursorInsert",
+	"r-cr:block-CursorReplace",
+	"c:block-CursorCommand",
+}
+require("mfd").enable_cursor_sync()
