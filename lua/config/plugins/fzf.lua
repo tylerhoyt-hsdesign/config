@@ -23,7 +23,7 @@ require("fzf-lua").setup({
 	},
 	lsp = {
 		async_or_timeout = 3000,
-		jump_to_single_result = true, -- skip picker if only one result
+		jump1 = true,
 		ignore_current_line = true,
 	},
 	require("fzf-lua").register_ui_select(),
