@@ -1,0 +1,2 @@
+-- Flutter-tools is loaded via lua/plugins/flutter-tools.lua
+-- This file can contain Dart-specific settings that should apply after the plugin loads

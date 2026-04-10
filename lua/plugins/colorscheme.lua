@@ -1,8 +1,4 @@
-vim.pack.add({
-	{
-		src = "https://github.com/kungfusheep/mfd.nvim",
-	},
-})
+vim.pack.add({"https://github.com/kungfusheep/mfd.nvim"})
 
 require("mfd").setup({
 	bright_comments = true,

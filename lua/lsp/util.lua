@@ -1,6 +1,6 @@
 local M = {}
 
-M.capabilitites = require("blink.cmp").get_lsp_capabilities()
+M.capabilities = require("blink.cmp").get_lsp_capabilities()
 
 M.on_attach = function(_, bufnr)
 	local map = function(mode, lhs, rhs, desc)

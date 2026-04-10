@@ -1,16 +1,12 @@
-require("config.remaps")
 require("config.options")
+require("config.remaps")
 
--- Plugins
-require("config.plugins.blink")
-require("config.plugins.colorscheme")
-require("config.plugins.conform")
-require("config.plugins.copilot")
-require("config.plugins.fzf")
-require("config.plugins.plenary")
-require("config.plugins.treesitter")
-require("config.plugins.flutter-tools")
-require("config.plugins.arduino")
+-- Auto-load all plugins
+for name, type in vim.fs.dir(vim.fn.stdpath("config") .. "/lua/plugins") do
+	if type == "file" and name:match("%.lua$") then
+		require("plugins." .. name:gsub("%.lua$", ""))
+	end
+end
 
 -- LSP Servers
 vim.lsp.enable({

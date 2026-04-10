@@ -3,9 +3,6 @@ vim.pack.add({
 		src = "https://github.com/saghen/blink.cmp",
 		version = vim.version.range("*"),
 	},
-})
-
-vim.pack.add({
 	"https://github.com/rafamadriz/friendly-snippets",
 })
 
@@ -33,7 +30,7 @@ require("blink.cmp").setup({
 		providers = {
 			snippets = {
 				opts = {
-					friendly_snippets = true, -- default
+					friendly_snippets = true,
 				},
 			},
 		},
