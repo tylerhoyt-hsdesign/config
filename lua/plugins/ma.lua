@@ -15,4 +15,11 @@ vim.pack.add({
 	},
 })
 
-require("ma").setup({})
+require("ma").setup({
+	vaults = {
+		{
+			name = "work",
+			path = "~/vaults/work/",
+		},
+	},
+})

@@ -1,6 +1,11 @@
 require("config.options")
 require("config.remaps")
 
+-- Turn on new UI
+require("vim._core.ui2").enable({
+	enable = true,
+})
+
 -- Auto-load all plugins
 for name, type in vim.fs.dir(vim.fn.stdpath("config") .. "/lua/plugins") do
 	if type == "file" and name:match("%.lua$") then

@@ -10,11 +10,7 @@ require("fzf-lua").setup({
 	"telescope",
 	winopts = {
 		height = 0.85,
-		width = 0.80,
-		preview = {
-			layout = "vertical",
-			vertical = "down:50%",
-		},
+		width = 0.8,
 	},
 	keymap = {
 		fzf = {
