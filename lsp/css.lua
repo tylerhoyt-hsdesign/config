@@ -4,7 +4,7 @@ return {
 	cmd = { "vscode-css-language-server", "--stdio" },
 	filetypes = { "css" },
 	root_markers = { "package.json", ".git" },
-	capabilities = util.capabilitites,
+	capabilities = util.capabilities,
 	on_attach = util.on_attach,
 	settings = {
 		css = { validate = true },

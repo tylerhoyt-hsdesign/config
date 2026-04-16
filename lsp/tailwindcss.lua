@@ -4,6 +4,6 @@ return {
 	cmd = { "tailwindcss-language-server", "--stdio" },
 	filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	root_markers = { "package.json", ".git" },
-	capabilities = util.capabilitites,
+	capabilities = util.capabilities,
 	on_attach = util.on_attach,
 }

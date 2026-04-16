@@ -10,7 +10,7 @@ return {
 		"stylua.toml",
 		".git",
 	},
-	capabilities = util.capabilitites,
+	capabilities = util.capabilities,
 	on_attach = util.on_attach,
 	settings = {
 		Lua = {

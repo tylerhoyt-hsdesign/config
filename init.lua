@@ -12,15 +12,20 @@ for name, type in vim.fs.dir(vim.fn.stdpath("config") .. "/lua/plugins") do
 		require("plugins." .. name:gsub("%.lua$", ""))
 	end
 end
--- Plugins
-require("config.plugins.blink")
-require("config.plugins.colorscheme")
-require("config.plugins.conform")
-require("config.plugins.copilot")
-require("config.plugins.fzf")
-require("config.plugins.plenary")
-require("config.plugins.treesitter")
-require("config.plugins.vimtex")
+
+-- Add config root to lua path for lsp configs
+package.path = vim.fn.stdpath("config") .. "/?.lua;" .. package.path
+
+-- Load and register LSP configs
+for name, type in vim.fs.dir(vim.fn.stdpath("config") .. "/lsp") do
+	if type == "file" and name:match("%.lua$") and name ~= "util.lua" then
+		local server_name = name:gsub("%.lua$", "")
+		local ok, config = pcall(require, "lsp." .. server_name)
+		if ok and config then
+			vim.lsp.config[server_name] = config
+		end
+	end
+end
 
 -- LSP Servers
 vim.lsp.enable({
@@ -30,4 +35,5 @@ vim.lsp.enable({
 	"css",
 	"astro",
 	"tailwindcss",
+	"eslint",
 })

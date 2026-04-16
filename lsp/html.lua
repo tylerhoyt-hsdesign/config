@@ -4,7 +4,7 @@ return {
 	cmd = { "vscode-html-language-server", "--stdio" },
 	filetypes = { "html", "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	root_markers = { "package.json", ".git" },
-	capabilities = util.capabilitites,
+	capabilities = util.capabilities,
 	on_attach = util.on_attach,
 	settings = {},
 }
