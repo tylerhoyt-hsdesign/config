@@ -44,16 +44,7 @@ local eslint_config_files = {
 
 ---@type vim.lsp.Config
 return {
-	cmd = function(dispatchers, config)
-		local cmd = "vscode-eslint-language-server"
-		if (config or {}).root_dir then
-			local local_cmd = vim.fs.joinpath(config.root_dir, "node_modules/.bin", cmd)
-			if vim.fn.executable(local_cmd) == 1 then
-				cmd = local_cmd
-			end
-		end
-		return vim.lsp.rpc.start({ cmd, "--stdio" }, dispatchers)
-	end,
+	cmd = { "vscode-eslint-language-server", "--stdio" },
 	filetypes = {
 		"javascript",
 		"javascriptreact",
@@ -133,11 +124,11 @@ return {
 			enable = false,
 			mode = "all",
 		},
-		format = true,
+		format = false,
 		quiet = false,
 		onIgnoredFiles = "off",
 		rulesCustomizations = {},
-		run = "onType",
+		run = "onSave",
 		problems = {
 			shortenToSingleLine = false,
 		},
