@@ -29,12 +29,18 @@ require("blink.cmp").setup({
 	sources = {
 		providers = {
 			snippets = {
+				score_offset = -5,
 				opts = {
 					friendly_snippets = true,
 				},
 			},
+			minecraft_registry = {
+				name = "Minecraft Registry",
+				module = "minecraft_registry_source",
+				score_offset = 0, -- surface above buffer completions
+			},
 		},
-		default = { "lsp", "path", "snippets", "buffer" },
+		default = { "lsp", "path", "buffer", "minecraft_registry", "snippets" },
 	},
 	fuzzy = { implementation = "rust" },
 })

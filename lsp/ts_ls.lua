@@ -6,5 +6,8 @@ return {
 	root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
 	capabilities = util.capabilities,
 	on_attach = util.on_attach,
+	init_options = {
+		maxTsServerMemory = 8192,
+	},
 	settings = {},
 }

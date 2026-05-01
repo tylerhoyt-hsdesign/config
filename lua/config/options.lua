@@ -68,3 +68,9 @@ vim.diagnostic.config({
 	signs = true,
 	underline = true,
 })
+
+---------------------------------------------------------
+--- 9. LOCAL WORKSPACE CONFIGS
+---------------------------------------------------------
+vim.opt.exrc = true
+vim.opt.secure = true
