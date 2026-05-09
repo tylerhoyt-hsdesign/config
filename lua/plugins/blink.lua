@@ -38,6 +38,7 @@ require("blink.cmp").setup({
 				name = "Minecraft Registry",
 				module = "minecraft_registry_source",
 				score_offset = 0, -- surface above buffer completions
+				min_keyword_length = 3,
 			},
 		},
 		default = { "lsp", "path", "buffer", "minecraft_registry", "snippets" },
