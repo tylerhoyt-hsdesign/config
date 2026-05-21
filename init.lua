@@ -4,6 +4,13 @@ require("config.remaps")
 -- Turn on new UI
 require("vim._core.ui2").enable({
 	enable = true,
+	msg = {
+		target = "cmd",
+		pager = { height = 0.5 },
+		dialog = { height = 0.5 },
+		cmd = { height = 0.5 },
+		msg = { height = 0.5, timeout = 4500 },
+	},
 })
 
 -- Auto-load all plugins
@@ -37,5 +44,5 @@ vim.lsp.enable({
 	"tailwindcss",
 	"eslint",
 	"marksman",
-	"spyglass"
+	"spyglass",
 })

@@ -23,7 +23,7 @@ return {
 					vim.env.VIMRUNTIME,
 					"${3rd}/luv/library",
 					util.lazy_path("plenary.nvim"),
-					"~/dev/plugins/adhd_todo",
+					-- "~/dev/plugins/adhd_todo",
 				},
 			},
 			diagnostics = {

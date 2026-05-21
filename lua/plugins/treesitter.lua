@@ -1,11 +1,22 @@
 vim.pack.add({
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
-		lazy = false,
-		build = ":TSUpdate",
 	},
 })
 
 require("nvim-treesitter").setup({
-	ensure_installed = { "astro", "typescript", "tsx", "javascript", "css", "html", "lua", "json" },
+	install = {
+		"astro",
+		"typescript",
+		"tsx",
+		"javascript",
+		"css",
+		"html",
+		"lua",
+		"json",
+		"jsdoc",
+	},
+	highlight = {
+		enable = true,
+	},
 })
