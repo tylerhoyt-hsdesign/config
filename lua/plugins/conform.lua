@@ -10,6 +10,7 @@ require("conform").setup({
 		html = { "prettier" },
 		css = { "prettier" },
 		astro = { "prettier" },
+    json = { "prettier" }
 	},
 	format_on_save = {
 		timeout_ms = 500,

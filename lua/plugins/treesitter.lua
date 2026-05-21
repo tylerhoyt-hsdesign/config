@@ -7,5 +7,5 @@ vim.pack.add({
 })
 
 require("nvim-treesitter").setup({
-	ensure_installed = { "astro", "typescript", "tsx", "javascript", "css", "html", "lua" },
+	ensure_installed = { "astro", "typescript", "tsx", "javascript", "css", "html", "lua", "json" },
 })
