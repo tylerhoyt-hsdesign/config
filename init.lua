@@ -36,5 +36,6 @@ vim.lsp.enable({
 	"astro",
 	"tailwindcss",
 	"eslint",
-  "spyglass"
+	"marksman",
+	"spyglass"
 })
