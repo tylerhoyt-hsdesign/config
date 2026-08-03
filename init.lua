@@ -1,5 +1,6 @@
 require("config.options")
 require("config.remaps")
+require("config.filetypes")
 
 -- Turn on new UI
 require("vim._core.ui2").enable({
@@ -45,4 +46,6 @@ vim.lsp.enable({
 	"eslint",
 	"marksman",
 	"spyglass",
+	"roslyn",
+	"vbnet_ls",
 })

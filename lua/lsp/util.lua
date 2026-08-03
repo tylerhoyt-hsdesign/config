@@ -29,4 +29,27 @@ M.lazy_path = function(plugin)
 	return vim.fn.stdpath("data") .. "/lazy/" .. plugin
 end
 
+M.dotnet_root = function(bufnr, on_dir, project_extension)
+	local root = vim.fs.root(bufnr, function(name)
+		local lower = name:lower()
+		return lower:match("%.sln$") ~= nil or lower:match("%.slnf$") ~= nil or lower:match("%.slnx$") ~= nil
+	end)
+
+	root = root or vim.fs.root(bufnr, function(name)
+		return name:lower():match("%." .. project_extension .. "$") ~= nil
+	end)
+
+	root = root or vim.fs.root(bufnr, function(name)
+		local lower = name:lower()
+		return lower == "web.config"
+			or lower == "directory.build.props"
+			or lower == "directory.build.targets"
+	end)
+
+	root = root or vim.fs.root(bufnr, ".git")
+	if root then
+		on_dir(root)
+	end
+end
+
 return M

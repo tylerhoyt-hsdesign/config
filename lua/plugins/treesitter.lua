@@ -7,6 +7,7 @@ vim.pack.add({
 require("nvim-treesitter").setup({
 	install = {
 		"astro",
+		"c_sharp",
 		"typescript",
 		"tsx",
 		"javascript",
@@ -15,6 +16,7 @@ require("nvim-treesitter").setup({
 		"lua",
 		"json",
 		"jsdoc",
+		"razor",
 	},
 	highlight = {
 		enable = true,
